@@ -46,6 +46,10 @@ print(f"Your word is '{word}'")
 while not is_game_over():
     guess = input("Your next take: ")
 
+    if guess in guesses:
+        print("Hey, you've already guessed that word! Try a different one now.")
+        continue
+
     if not guess_is_valid(guess):
         continue
 
