@@ -4,7 +4,7 @@ import random
 
 def congratulate_user():
     print("=============================")
-    print(f"= Congratulations! You won! your words: {guesses}=")
+    print(f"= Congratulations! You won! your words: {guesses} =")
     print("=============================")
 
 
@@ -63,3 +63,12 @@ while not is_game_over():
     else:
         errors += 1
         print(f"Oops :( No such word, you have {ERRORS_TO_LOSE - errors} lives more")
+
+if errors == ERRORS_TO_LOSE:
+    print("=============================")
+    print("= Sorry to inform you, but...=")
+    print("= THE GAME IS OVER =")
+    print("= You've used all your attempts. =")
+    print(f"= The word was: '{word}' =")
+    print("= Have a nice day! =")
+    print("=============================")
